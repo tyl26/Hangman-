@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@100;400;700&display=swap');
+
+:root {
+  --primary-font-color: whitesmoke;
+  --secondary-font-color: #fbd757;
+  --button-hover-color: #ff124f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: end;
+  background-image: url('https://images.unsplash.com/photo-1567881248445-83ead68a44d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
+  color: var(--primary-font-color);
+  text-shadow: 0 0 5px #fff, 0 0 2px #fff;
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+h3 {
+  width: 150px;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  color: var(--primary-font-color);
+}
+
+h4 {
+  color: var(--secondary-font-color);
+  letter-spacing: 0.1rem;
+  margin: 2rem auto;
+}
+
+#numberOfTries {
+  color: var(--primary-font-color);
+}
+
+.stats_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 18rem;
+  margin-top: 0rem;
+  margin-left: 2rem;
+  opacity: 0;
+  transition: 1s ease-in;
+}
+
+#wronglet {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff124f;
+  text-shadow: 0px 0px 35px rgb(216, 151, 233), -5px -1.5px 2px rgb(0, 0, 0);
+}
+
+.stats_container.revealTries {
+  opacity: 1;
+}
+
+#welcomeScreen {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  margin: -10.5rem 0rem 10rem 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: width 0.7s ease-in;
+}
+
+#welcomeScreen.expanded {
+  width: 625px;
+  margin-top: -3rem;
+}
+
+#welcomeScreen.wrong {
+  border: 3px solid rgba(255, 18, 79, 0.5);
+}
+
+#welcomeScreen.correct {
+  border: 3px solid rgba(102, 206, 79, 0.5);
+}
+
+#startGameBtn {
+  background: transparent;
+  border: solid 2px var(--primary-font-color);
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: var(--primary-font-color);
+  letter-spacing: 0.05rem;
+}
+
+#playAgain {
+  background: transparent;
+  border: solid 2px var(--primary-font-color);
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: var(--primary-font-color);
+  letter-spacing: 0.05rem;
+  width: 180px;
+  display: none;
+  cursor: pointer;
+}
+
+#startGameBtn:hover {
+  background: var(--button-hover-color);
+  border: solid 2px var(--button-hover-color);
+  cursor: pointer;
+}
+
+#startGameContainer {
+  height: 280px;
+  width: 500px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+#startGameContainer.hideContent {
+  display: none;
+}
+
+#guessWord {
+  text-align: center;
+  margin-top: 0rem;
+  color: var(--primary-font-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 0px 0px 35px rgb(216, 151, 233), -5px -1.5px 2px rgb(0, 0, 0);
+}
+
+#instruction {
+  text-align: center;
+  color: var(--secondary-font-color);
+  letter-spacing: 0.1rem;
+  margin: 2rem auto;
+  font-size: 1.4rem;
+}
+
+#hangmansvg {
+  margin: -10rem 0rem -8rem 18rem;
+  width: 250px;
+}
+
+#scaffold {
+  display: none;
+}
+#legs {
+  display: none;
+}
+#arms {
+  display: none;
+}
+#body {
+  display: none;
+}
+#head {
+  display: none;
+}
+
+/* THE END */
